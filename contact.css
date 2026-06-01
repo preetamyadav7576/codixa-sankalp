@@ -1,0 +1,430 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.navbar .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  height: 50px;
+  border-radius: 6px;
+}
+
+.code {
+  color: #f97316;
+  position: absolute;
+  left: 80px;
+  font-size: 1.5rem;
+}
+
+.sank {
+  color: #6b21a8;
+  position: absolute;
+  left: 170px;
+  font-size: 1.5rem;
+}
+
+/* Nav Links Desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f97316;
+}
+
+/* ===== Hamburger Menu (Hidden on Desktop) ===== */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #6b21a8;
+  user-select: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 850px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #f97316, #6b21a8);
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+  }
+
+  .nav-menu.active {
+    max-height: 400px; /* enough space for links */
+    transition: max-height 0.4s ease-in;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+  }
+
+  .nav-links a {
+    color: #fff;
+    font-size: 1.1rem;
+  }
+
+  .nav-links a:hover {
+    color: #ffe6d1;
+  }
+}
+
+/* ===== Contact Us Section ===== */
+.contact-us {
+  padding: 80px 10%;
+  background: #fafaff;
+  text-align: center;
+}
+
+.contact-us .section-title {
+  color: #6b21a8;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-us .section-subtitle {
+  color: #555;
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.7;
+}
+
+/* ===== Contact Form ===== */
+.contact-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  color: #6b21a8;
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 6px rgba(249, 115, 22, 0.3);
+  outline: none;
+}
+
+/* ===== Send Button ===== */
+.send-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(45deg, #6b21a8, #f97316);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+  background: linear-gradient(45deg, #f97316, #6b21a8);
+  transform: scale(1.03);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .contact-us {
+    padding: 60px 5%;
+  }
+
+  .contact-form {
+    padding: 25px 20px;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+/* ===== Connect Our Team Section ===== */
+.connect-team {
+  padding: 80px 10%;
+  background-color: #fafaff;
+  text-align: center;
+}
+
+.connect-team .section-title {
+  color: #6b21a8; 
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.connect-team .section-subtitle {
+  font-size: 1rem;
+  color: #555;
+  /* max-width: 700px; */
+  margin: 0 auto 50px;
+  line-height: 1.7;
+}
+
+/* ===== Cards Container ===== */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+/* ===== Individual Team Card ===== */
+.team-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+  border-top: 5px solid #f97316; /* Orange border */
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(107, 33, 168, 0.2);
+}
+
+.team-icon {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.team-card h3 {
+  color: #6b21a8;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.team-card p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* ===== WhatsApp Button ===== */
+.team-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: linear-gradient(45deg, #6b21a8, #f97316);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.team-btn:hover {
+  background: linear-gradient(45deg, #f97316, #6b21a8);
+  transform: scale(1.05);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .connect-team {
+    padding: 60px 6%;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .team-btn {
+    width: 80%;
+  }
+}
+
+/* ===== FOOTER SECTION ===== */
+.footer {
+  background: linear-gradient(90deg, #f97316, #6b21a8);
+  color: #fff;
+  padding: 60px 10% 30px;
+
+}
+
+/* Footer Container Grid */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Individual Footer Box */
+.footer-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #fff;
+  border-left: 4px solid #fff;
+  padding-left: 10px;
+}
+
+.footer-box p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #f0e6ff;
+}
+.footer-box p a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 10px;
+}
+
+.footer-box ul li a {
+  text-decoration: none;
+  color: #f0e6ff;
+  transition: all 0.3s ease;
+}
+
+.footer-box ul li a:hover {
+  color: #ffe6d1;
+  padding-left: 6px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 5px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.social-icons a img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 6px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.15);
+  background: #f97316;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 40px;
+  padding-top: 15px;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #f0e6ff;
+  letter-spacing: 0.3px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 992px) {
+  .footer {
+    padding: 50px 8% 20px;
+  }
+
+  .footer-container {
+    gap: 25px;
+  }
+
+  .footer-box h3 {
+    font-size: 1.2rem;
+  }
+}
+
+

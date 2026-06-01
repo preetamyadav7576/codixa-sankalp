@@ -1,0 +1,706 @@
+/* ===== Theme Colors ===== */
+:root {
+  --purple: #6b21a8;
+  --orange: #f97316;
+  --light-bg: #f9f9ff;
+  --dark-text: #222;
+}
+
+/* ===== Reset & Base ===== */
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--dark-text);
+}
+
+h1, h2, h3 {
+  color: var(--purple);
+}
+
+a {
+  text-decoration: none;
+  color: var(--orange);
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.navbar .container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo {
+  height: 50px;
+  border-radius: 6px;
+}
+
+.code {
+  color: #f97316;
+  position: absolute;
+  left: 80px;
+  font-size: 1.5rem;
+}
+
+.sank {
+  color: #6b21a8;
+  position: absolute;
+  left: 170px;
+  font-size: 1.5rem;
+}
+
+/* Nav Links Desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f97316;
+}
+
+/* ===== Hamburger Menu (Hidden on Desktop) ===== */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #6b21a8;
+  user-select: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 850px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #f97316, #6b21a8);
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+  }
+
+  .nav-menu.active {
+    max-height: 400px; /* enough space for links */
+    transition: max-height 0.4s ease-in;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+  }
+
+  .nav-links a {
+    color: #fff;
+    font-size: 1.1rem;
+  }
+
+  .nav-links a:hover {
+    color: #ffe6d1;
+  }
+}
+
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(90deg, #f97316, #6b21a8);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+/* ===== Website Development Section ===== */
+.webdev-section {
+  padding: 80px 10%;
+  background: #fafaff;
+}
+
+.webdev-heading {
+  text-align: center;
+  color: #6b21a8; /* Codixa Purple */
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+}
+
+.webdev-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  gap: 40px;
+}
+
+/* ===== Left Side (Text Card) ===== */
+.webdev-text {
+  flex: 1 1 55%;
+  background: #fff;
+  padding: 35px 40px;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  line-height: 1.8;
+  color: #333;
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.webdev-text p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  
+}
+
+/* ===== Right Side ===== */
+.webdev-image-section {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.webdev-image {
+  width: 300px; 
+  height: 300px;
+  border-radius:50% ;
+  overflow: hidden;
+  margin: 0 auto 20px;
+ box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+ transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.webdev-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.webdev-image:hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(107, 33, 168, 0.3);
+}
+
+
+
+/* ===== Button ===== */
+.consult-btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #6b21a8, #f97316);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.consult-btn:hover {
+  background: linear-gradient(45deg, #f97316, #6b21a8);
+  transform: scale(1.05);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 900px) {
+  .webdev-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .webdev-text {
+    flex: 1 1 100%;
+    padding: 25px;
+    text-align: left;
+  }
+
+  .webdev-image-section {
+    flex: 1 1 100%;
+  }
+
+  .webdev-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .consult-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== Service Cards ===== */
+.services {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.services p {
+  max-width: 800px;
+  margin: 10px auto;
+  padding-bottom: 30px;
+}
+
+
+/* ===== Web Development Section ===== */
+.webdev-section {
+  background: #fafaff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.section-title {
+  color: #6b21a8;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+}
+
+/* ===== Cards Grid ===== */
+.webdev-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* ===== Individual Card ===== */
+.web-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px 20px;
+  text-align: left;
+  border-top: 6px solid #f97316; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.web-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  border-top-color: #6b21a8;
+}
+
+.web-card h3 {
+  color: #6b21a8;
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.web-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.web-card li {
+  margin: 10px 0;
+  background: #f9f9ff;
+  padding: 10px 12px;
+  border-left: 4px solid #f97316;
+  border-radius: 6px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .webdev-section {
+    padding: 50px 6%;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .web-card {
+    padding: 20px;
+  }
+
+  .web-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .web-card li {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
+
+/* ===== Digital Change Section ===== */
+.digital-change {
+  /* background: linear-gradient(90deg, #6b21a8, #f97316); */
+  color: #fff;
+  text-align: center;
+  padding: 80px 10%;
+  border-radius: 0 0 40px 40px;
+}
+
+.digital-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.digital-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto 35px;
+  color: black;
+}
+
+/* ===== Buttons ===== */
+.digital-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  background: linear-gradient(45deg, #6b21a8, #f97316);
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* Primary Button  */
+.btn-primary:hover {
+   background: linear-gradient(45deg, #f97316, #6b21a8);
+  transform: scale(1.05);
+}
+
+/* Secondary Button  */
+.btn-secondary:hover {
+   background: linear-gradient(45deg, #f97316, #6b21a8);
+  transform: scale(1.05);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .digital-change {
+    padding: 60px 6%;
+  }
+
+  .digital-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .digital-content p {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+  }
+
+  .digital-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+
+/* ===== Connect Our Team Section ===== */
+.connect-team {
+  padding: 80px 10%;
+  background-color: #fafaff;
+  text-align: center;
+}
+
+.connect-team .section-title {
+  color: #6b21a8; 
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.connect-team .section-subtitle {
+  font-size: 1rem;
+  color: #555;
+  /* max-width: 700px; */
+  margin: 0 auto 50px;
+  line-height: 1.7;
+}
+
+/* ===== Cards Container ===== */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+/* ===== Individual Team Card ===== */
+.team-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+  border-top: 5px solid #f97316; /* Orange border */
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(107, 33, 168, 0.2);
+}
+
+.team-icon {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.team-card h3 {
+  color: #6b21a8;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.team-card p {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+/* ===== WhatsApp Button ===== */
+.team-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: linear-gradient(45deg, #6b21a8, #f97316);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.team-btn:hover {
+  background: linear-gradient(45deg, #f97316, #6b21a8);
+  transform: scale(1.05);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .connect-team {
+    padding: 60px 6%;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .team-btn {
+    width: 80%;
+  }
+}
+
+
+/* ===== FOOTER SECTION ===== */
+.footer {
+  background: linear-gradient(90deg, #f97316, #6b21a8);
+  color: #fff;
+  padding: 60px 10% 30px;
+
+}
+
+/* Footer Container Grid */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Individual Footer Box */
+.footer-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #fff;
+  border-left: 4px solid #fff;
+  padding-left: 10px;
+}
+
+.footer-box p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #f0e6ff;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin-bottom: 10px;
+}
+
+.footer-box ul li a {
+  text-decoration: none;
+  color: #f0e6ff;
+  transition: all 0.3s ease;
+}
+
+.footer-box ul li a:hover {
+  color: #ffe6d1;
+  padding-left: 6px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.social-icons a img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 6px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.15);
+  background: #f97316;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 40px;
+  padding-top: 15px;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #f0e6ff;
+  letter-spacing: 0.3px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 992px) {
+  .footer {
+    padding: 50px 8% 20px;
+  }
+
+  .footer-container {
+    gap: 25px;
+  }
+
+  .footer-box h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+
+
+/* ===== Scroll Reveal Animation ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional delay for staggered animation (cards look better) */
+.reveal.delay-1 {
+  transition-delay: 0.2s;
+}
+.reveal.delay-2 {
+  transition-delay: 0.4s;
+}
+.reveal.delay-3 {
+  transition-delay: 0.6s;
+}
