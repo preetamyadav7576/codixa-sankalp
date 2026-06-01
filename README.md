@@ -62,11 +62,11 @@ JavaScript| Interactivity
 
 🖥️ Homepage
 
-"Homepage" (./screenshots/homepage.jpeg)
+"Homepage" (homepage.png)
 
 📱 Responsive Mobile View
 
-"Mobile" (./screenshots/mobile.jpeg)
+"Mobile" (mobile.jpeg)
 
 ---
 
